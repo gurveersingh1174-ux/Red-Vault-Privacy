@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Red Vault Privacy - Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f3f6fb;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #dbe4f3;
+      --brand: #ab1324;
+      --brand-dark: #0b1735;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+      background: linear-gradient(180deg, #eef3fb 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 980px;
+      margin: 36px auto;
+      padding: 0 20px;
+    }
+
+    .hero {
+      background: radial-gradient(circle at 82% 24%, rgba(222, 89, 107, 0.36), transparent 45%),
+                  linear-gradient(130deg, var(--brand-dark), #1f325c 52%, #8f1632);
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 16px 36px rgba(11, 23, 53, 0.22);
+    }
+
+    .hero h1 {
+      margin: 0 0 6px;
+      font-size: clamp(26px, 4vw, 34px);
+      line-height: 1.2;
+    }
+
+    .hero p {
+      margin: 0;
+      color: #e8edf9;
+    }
+
+    .card {
+      margin-top: 16px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 22px;
+      color: var(--brand-dark);
+    }
+
+    h3 {
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: var(--brand-dark);
+    }
+
+    p, li { color: var(--text); }
+
+    .muted { color: var(--muted); }
+
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      font-size: 12px;
+      margin-right: 6px;
+      margin-top: 8px;
+      color: #f8fbff;
+    }
+
+    ul { padding-left: 20px; }
+
+    .note {
+      padding: 12px;
+      border: 1px solid #f0ccd3;
+      background: #fff5f7;
+      border-radius: 10px;
+      color: #8f1632;
+      font-size: 14px;
+    }
+
+    .footer {
+      margin: 20px 0 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    a { color: #0b56b8; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero" aria-label="Privacy policy header">
+      <h1>Red Vault Privacy Policy</h1>
+      <p>Effective date: February 15, 2026</p>
+      <div>
+        <span class="pill">Browser-only processing</span>
+        <span class="pill">No external telemetry backend</span>
+        <span class="pill">Aggregate metrics only</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>1. Overview</h2>
+      <p>
+        Red Vault Privacy is a browser extension that helps users protect sensitive information while using supported AI chat sites.
+        The extension detects and pseudonymizes sensitive text in prompts and supported attachments before transmission,
+        and restores readable context in-session using ephemeral mapping.
+      </p>
+      <p class="muted">
+        Supported sites currently include: <strong>chatgpt.com</strong>, <strong>chat.openai.com</strong>, and <strong>gemini.google.com</strong>.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>2. Data We Process</h2>
+      <p>
+        To provide protection functionality, the extension may process user-entered or user-uploaded content on supported AI sites,
+        including content that may contain personal or sensitive information.
+      </p>
+
+      <h3>Processed content types</h3>
+      <ul>
+        <li>Prompt text entered into supported AI chat compose fields.</li>
+        <li>Supported attachment text extracted locally in-browser (for supported file types).</li>
+        <li>Policy configuration data (managed and/or local rule settings).</li>
+        <li>Aggregate dashboard counters and telemetry metrics (counts only, no raw prompt bodies).</li>
+      </ul>
+
+      <h3>Examples of sensitive categories detected</h3>
+      <ul>
+        <li>Email addresses, phone numbers, account and financial identifiers.</li>
+        <li>Credential-like secrets (for example API keys/password-like patterns).</li>
+        <li>Custom enterprise keywords and patterns configured by policy.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>3. How Data Is Used</h2>
+      <ul>
+        <li>Detect sensitive content in supported inputs.</li>
+        <li>Pseudonymize detected values before transmission to supported AI sites.</li>
+        <li>Restore readable context in-session using local ephemeral mapping.</li>
+        <li>Display aggregate operational metrics in the dashboard.</li>
+      </ul>
+      <p>
+        Red Vault Privacy is designed for a single purpose: reducing accidental exposure of sensitive information when users interact with supported AI chat platforms.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>4. Storage, Retention, and Ephemeral Mapping</h2>
+      <h3>Ephemeral mapping model</h3>
+      <ul>
+        <li>PII mapping is tab/session scoped.</li>
+        <li>Mapping is cleared on tab close.</li>
+        <li>Mapping is cleared after inactivity timeout (about 30 minutes).</li>
+        <li>Mapping is cleared on browser/service-worker restart.</li>
+      </ul>
+
+      <h3>Persistent storage</h3>
+      <ul>
+        <li>No raw prompt bodies are intentionally persisted in extension storage.</li>
+        <li>No raw PII mapping tables are intentionally persisted as long-term stored data.</li>
+        <li>Aggregate metrics may be stored locally for dashboard/reporting purposes.</li>
+        <li>Policy settings (managed/local admin rules) may be stored locally per browser policy model.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>5. Data Sharing and Transfers</h2>
+      <ul>
+        <li>Red Vault Privacy does not sell user data.</li>
+        <li>Red Vault Privacy does not transfer user data to external analytics or advertising platforms for unrelated purposes.</li>
+        <li>The extension does not rely on a dedicated Red Vault backend for core protection logic.</li>
+      </ul>
+      <p>
+        Note: content that a user chooses to send to third-party AI providers is subject to those providers' own terms and policies.
+        Red Vault Privacy attempts to reduce raw sensitive exposure by pseudonymizing content before transmission.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>6. Security Measures</h2>
+      <ul>
+        <li>Local processing model to minimize unnecessary transmission.</li>
+        <li>Fail-safe behavior when mapping continuity is unavailable (restore is skipped instead of incorrect restore).</li>
+        <li>Administrative policy controls and managed rule support where available.</li>
+      </ul>
+      <p class="note">
+        Security boundary note: If an endpoint device is fully compromised, local protections may be bypassed by the attacker.
+        Users should maintain endpoint security best practices.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>7. Enterprise Policy Controls</h2>
+      <p>
+        In enterprise-managed environments, administrators may configure mandatory pseudonymization keywords and rules
+        via browser managed storage/GPO channels. Managed rules are intended to be enforced as read-only controls in settings.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>8. Children's Privacy</h2>
+      <p>
+        Red Vault Privacy is not directed to children under 13. We do not intentionally design the extension to collect children's personal data.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>9. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. Updates will be reflected by revising the effective date on this page.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>10. Contact</h2>
+      <p>
+        For privacy questions or requests, contact: <a href="mailto:privacy@redvaultprivacy.com">privacy@redvaultprivacy.com</a>
+      </p>
+      <p class="muted">
+        If you are republishing this policy, replace the contact email with your official support/privacy mailbox.
+      </p>
+    </section>
+
+    <p class="footer">&copy; 2026 Red Vault Privacy. All rights reserved.</p>
+  </main>
+</body>
+</html>
